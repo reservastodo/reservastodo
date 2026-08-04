@@ -101,6 +101,7 @@ body {
 /* Text Content */
 .text-content {
     margin-bottom: 1.5rem;
+    width: 100%;
 }
 
 .title {
@@ -352,10 +353,10 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .glass-panel {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
     }
     .title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     .subtitle {
         font-size: 1.05rem;
@@ -363,13 +364,26 @@ body {
 }
 
 @media (max-width: 480px) {
+    .content-wrapper {
+        width: 95%;
+    }
+    .glass-panel {
+        padding: 1.5rem 1rem;
+    }
     .title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    .subtitle {
+        font-size: 0.95rem;
     }
     .logo {
-        max-width: 200px;
+        max-width: 180px;
     }
     .form-container {
         flex-direction: column;
+        width: 100%;
+    }
+    .email-input, .submit-btn {
+        width: 100%;
     }
 }
