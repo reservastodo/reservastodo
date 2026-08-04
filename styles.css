@@ -293,37 +293,59 @@ body {
     border-radius: 10px;
 }
 
-.carousel-card {
+.wa-preview-card {
     flex: 0 0 auto;
-    width: 120px;
-    height: 100px;
-    background-image: linear-gradient(to bottom, rgba(5, 10, 21, 0.6), rgba(15, 61, 129, 0.85)), url('img/map_thumb.png');
-    background-size: cover;
-    background-position: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+    width: 260px;
+    height: auto;
+    background-color: #202c33;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
-    color: var(--color-text-main);
+    overflow: hidden;
     scroll-snap-align: start;
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.carousel-card:hover {
-    background: rgba(255, 127, 15, 0.15);
-    border-color: var(--color-orange);
+.wa-preview-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px var(--color-orange-glow);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
-.card-icon {
-    width: 28px;
-    height: 28px;
-    margin-bottom: 0.5rem;
-    color: var(--color-orange);
+.wa-card-image {
+    width: 100%;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+}
+
+.wa-card-content {
+    padding: 12px 14px;
+    background-color: #202c33;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+}
+
+.wa-card-title {
+    font-size: 0.95rem;
+    color: #e9edef;
+    font-weight: 600;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wa-card-domain {
+    font-size: 0.8rem;
+    color: #8696a0;
+    font-weight: 400;
 }
 
 
