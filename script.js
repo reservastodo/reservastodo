@@ -17,6 +17,46 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < particleCount; i++) {
         createParticle(particleLayer);
     }
+
+    // Form Handling
+    const emailForm = document.getElementById('email-form');
+    const formContent = document.getElementById('form-content');
+    const thankYouContent = document.getElementById('thank-you-content');
+
+    if (emailForm) {
+        emailForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue y muestre error 405
+            
+            const email = this.querySelector('input[name="email"]').value;
+            const submitBtn = this.querySelector('.submit-btn');
+            
+            // Estado de carga
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+
+            // Para que este formulario realmente envíe el correo a vacacionesynegociosencolombia@gmail.com,
+            // necesitas usar un servicio como Formspree.io o Web3Forms.
+            // Ejemplo de cómo se vería la petición (descomentar y poner tu URL cuando la tengas):
+            /*
+            fetch('https://formspree.io/f/TU_ID_AQUI', {
+                method: 'POST',
+                body: new FormData(emailForm),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                // Éxito
+            }).catch(error => {
+                // Error
+            });
+            */
+
+            // Simulamos un retraso de red para la animación
+            setTimeout(() => {
+                formContent.style.display = 'none';
+                thankYouContent.style.display = 'block';
+            }, 800);
+        });
+    }
 });
 
 function createParticle(container) {
